@@ -6,7 +6,7 @@
 	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	  	<!-- Site Properties -->
-	  	<title>Homepage</title>
+	  	<title>FancyBook</title>
 	  	<link rel="stylesheet" type="text/css" href="../dist/semantic.min.css">
 	  	<style type="text/css">
 		    .hidden.menu {
@@ -55,6 +55,14 @@
 		      display: none;
 		    }
 
+			.ui.search{
+				margin-right: 10px;	
+			}
+
+		    .ui.search input[type="text"]{
+			    width: 250px;
+			}
+
 		    @media only screen and (max-width: 700px) {
 		      .ui.fixed.menu {
 		        display: none !important;
@@ -87,7 +95,28 @@
 		<script>
 		  $(document)
 		    .ready(function() {
-
+		    	// searches across any array/object of searchable objects
+				var
+				  content = [
+				    {
+				      title: 'Horse',
+				      description: 'An Animal',
+				    },
+				    {
+				      title: 'Cow',
+				      description: 'Another Animal',
+				    }
+				  ]
+				;
+				$('.ui.search')
+				  .search({
+				    source : content,
+				    searchFields   : [
+				      'title','description'
+				    ],
+				    searchFullText: true
+				  })
+				;
 		      // fix menu when passed
 		      $('.masthead')
 		        .visibility({
@@ -111,17 +140,28 @@
 		<div class="ui large top fixed hidden menu">
 		  <div class="ui container">
 		    <a class="active item">Home</a>
-		    <a class="item">Work</a>
+		    <a class="item">Category</a>
 		    <a class="item">Company</a>
 		    <a class="item">Careers</a>
 		    <div class="right menu">
-		      <div class="item">
-		        <a class="ui button">Log in</a>
-		      </div>
-		      <div class="item">
-		        <a class="ui primary button">Sign Up</a>
-		      </div>
-		    </div>
+			    <div class="item">
+			    	<div class="">
+				      <div class="ui search">
+						  <div class="ui icon input">
+						    <input class="prompt" type="text" placeholder="Tìm Truyện ..">
+						    <i class="search icon"></i>
+						  </div>
+						  <div class="results"></div>
+					   </div>
+				   </div>
+			    </div>
+				<div class="item">
+			        <a class="ui button">Log in</a>
+			    </div>
+			    <div class="item">
+			        <a class="ui secondary button">Sign Up</a>
+			    </div>
+			</div>
 		  </div>
 		</div> 	
 
@@ -150,6 +190,15 @@
 		        <a class="item">Company</a>
 		        <a class="item">Careers</a>
 		        <div class="right item">
+		        	<div class="">
+				      <div class="ui search">
+						  <div class="ui icon input">
+						    <input class="prompt" type="text" placeholder="Tìm Truyện ..">
+						    <i class="search icon"></i>
+						  </div>
+						  <div class="results"></div>
+					   </div>
+				   </div>
 		          <a class="ui inverted teal button">Log in</a>
 		          <a class="ui inverted olive button">Sign Up</a>
 		        </div>
@@ -158,10 +207,11 @@
 
 		    <div class="ui text container">
 		      <h1 class="ui inverted header">
-		        Imagine-a-Company
+		        Fancy Book
 		      </h1>
-		      <h2>Do whatever you want when you want to.</h2>
+		      <h2>Tìm đọc những cuốn truyện hay nhất.</h2> 
 		      <!-- <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div> -->
+		      
 		    </div>
 
 		  </div>
