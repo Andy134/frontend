@@ -14,7 +14,7 @@
 		    }
 		    
 		    .ui.masthead.segment{
-			    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('assets/images/bg2.jpg');
+			    background: linear-gradient( rgba(0, 0, 0, 0.125), rgba(0, 0, 0, 0.125) ), url('assets/images/bg2.jpg');
 			    background-position:center top;
 		    }
 		    .masthead.segment {
@@ -99,8 +99,6 @@
 		            $('.fixed.menu').transition('fade out');
 		          }
 		      });
-
-		      // create sidebar and attach to menu open
 		      $('.ui.sidebar')
 		        .sidebar('attach events', '.toc.item');
 		      });
@@ -116,6 +114,8 @@
 		    <a class="item">Careers</a>
 		    <div class="right menu">
 		    	<div class="ui buttons">
+		    	  <button class="ui basic button">
+				  <i class="dashboard icon"></i>Administrator</button>
 				  <button class="ui basic button">
 				  <i class="icon user"></i>Log in</button>
 				  <button class="ui basic button">
@@ -124,7 +124,6 @@
 		    </div>
 		  </div>
 		</div> 	
-
 		<!-- Sidebar Menu -->
 		<div class="ui vertical inverted sidebar menu">
 		  <a class="active item">Home</a>
@@ -133,8 +132,8 @@
 		  <a class="item">Careers</a>
 		  <a class="item">Login</a>
 		  <a class="item">Signup</a>
+		  <a class="item">Administrator</a>
 		</div>
-
 		<!-- Page Contents -->
 		<div class="pusher">
 		<!-- Masthead -->
@@ -150,25 +149,17 @@
 		        <a class="item">Company</a>
 		        <a class="item">Careers</a>
 		        <div class="right item">
+		       	  <a class="ui inverted orange button">Aministrator</a>
 		          <a class="ui inverted teal button">Log in</a>
 		          <a class="ui inverted olive button">Sign Up</a>
 		        </div>
 		      </div>
 		    </div>
-
-			<!-- <div id="imgheader">
-		         <img src="assets/images/Kogi-logo2.png"/>
-		    </div> -->
 		    <div class="ui text container">
-		      <img id="imgHeader" style="margin-top: 7em;" src="assets/images/Kogi-logo2.png"/>
-		    	
-		      <!-- <h2>Do whatever you want when you want to.</h2> -->
-		      <!-- <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div> -->
+		      <img style="margin-top: 7em;" src="assets/images/Kogi-logo2.png"/>
 		    </div>
-
 		  </div>
 		  <!--End Masthead -->
-
 		  <div class="ui vertical stripe segment">
 		    <div class="ui container">
 		      <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
@@ -195,9 +186,6 @@
 		      <a class="ui large button">I'm Still Quite Interested</a>
 		    </div>
 		  </div>
-
-
-
 		  <div class="ui inverted vertical footer segment">
 		    <div class="ui container">
 		      <div class="ui stackable inverted divided equal height stackable grid">
@@ -227,6 +215,5 @@
 		    </div>
 		  </div>
 		</div>
-
 	</body>
 </html>
