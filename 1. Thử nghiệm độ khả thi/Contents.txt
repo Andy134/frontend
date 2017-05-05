@@ -1,0 +1,5 @@
+>> liên kết giữa admin system và blog (local)
+1. Tạo 1 blog wordpress
+2. Kết nối java với db của blog
+3. Thêm mới 1 trang
+4. Kiểm tra thay đổi trên blog
