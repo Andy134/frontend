@@ -14,6 +14,15 @@
 	  	<script src="assets/library/jquery.min.js"></script>
 		<script src="../dist/semantic.min.js"></script>
 		<script>
+			 $(document).ready(function(){
+		        $('#modalDelete').modal({
+				    closable  : true,
+				    onApprove : function() {
+				      window.alert('Approved!');
+				    }
+				  })
+		        .modal('attach events', '.deleteBtn', 'show'); 
+		    });
 		</script>
 	</head>
 	<body>
@@ -21,7 +30,10 @@
 			<br>
 			<!-- Navigator -->
 			<div class="ui secondary menu">
-			    <div class="header item">Kogi</div>
+				<div class="item">
+					<img src="assets/images/logo-black.png">
+				</div>
+			    <!-- <div class="header item">Kogi</div> -->
 			    <a class="orange item" href="#">
 			      Member Profile 
 			    </a>
@@ -51,17 +63,15 @@
 
 			<!-- Sidebar -->
 			<div class="ui grid">
-			    <div class="three wide column">
+			    <div class="four wide column">
 			        <!-- <div class="ui secondary vertical pointing fluid menu"> --> 
-			        <div class="ui secondary vertical fluid menu">
+			        <div class="ui vertical pointing menu">
 
 						<div class="item">
 						    <div class="header">Users</div>
 						    <div class="menu">
 						    	<a class="orange item active">List Users</a>
 						    	<a class="red item">Add new</a>
-						    	<a class="green item">Edit</a>
-						    	<a class="yellow item">Delete</a>
 						    	<!-- <a class="red item">View</a> -->
 						    </div>
 						</div>
@@ -71,8 +81,6 @@
 						    <div class="menu">
 						    	<a class="orange item">List Roles</a>
 						      	<a class="red item">Add new</a>
-						    	<a class="green item">Edit</a>
-						    	<a class="yellow item">Delete</a>
 						    </div>
 						</div>
 
@@ -81,8 +89,6 @@
 						    <div class="menu">
 						      	<a class="orange item">List Source</a>
 						      	<a class="red item">Add new</a>
-						    	<a class="green item">Edit</a>
-						    	<a class="yellow item">Delete</a>
 						    </div>
 						</div>
 
@@ -91,13 +97,11 @@
 						    <div class="menu">
 						      	<a class="orange item">List Batch</a>
 						      	<a class="red item">Add new</a>
-						    	<a class="green item">Edit</a>
-						    	<a class="yellow item">Delete</a>
 						    </div>						
 						</div>
 					</div>
 			    </div>
-			    <div class="thirteen wide column ">
+			    <div class="twelve wide column ">
 
 			    	<!-- <i class="dashboard icon"></i> -->
 			    	<h3 class="ui header">
@@ -121,7 +125,7 @@
 					    </div>
 
 					  	<div class="right menu">
-						<button class="mini ui inverted green button"><i class="plus icon"></i>Add New</button>
+						<button class="ui secondary button"><i class="plus icon"></i>Add New</button>
 					  	</div>
 
 					  </div>
@@ -144,7 +148,7 @@
 
 					      	<button class="tiny ui inverted blue button"><i class="edit icon"></i>Edit</button>
 
-					      	<button class="tiny ui inverted red button"><i class="delete icon"></i>Delete</button>
+					      	<button class="deleteBtn tiny ui inverted red button"><i class="delete icon"></i>Delete</button>
 
 					      </td>
 					    </tr>
@@ -195,6 +199,21 @@
 
 				</div>
 			</div>
+
+			<!-- Modal confirm delete -->
+			<div id="modalDelete" class="ui modal">
+	
+				  <div class="header">Delete</div>
+				  <div class="content">
+				    <p>Are you sure to delete this item?</p>
+				  </div>
+				  <div class="actions">
+				    <div class="ui approve negative button">Yes</div>
+				    <div class="ui cancel button">Cancel</div>
+				  </div>
+
+			</div>
+			<!-- Modal confirm delete -->
 		</div>
 	</body>
 </html>
