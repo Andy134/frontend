@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  	<meta charset="utf-8" />
+	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	  	<!-- Site Properties -->
+	  	<title>Kogi App</title>
+	  	<link rel="stylesheet" type="text/css" href="../dist/semantic.min.css">
+	  	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	  	<style type="text/css">
+		</style>
+	  	<script src="assets/library/jquery.min.js"></script>
+		<script src="../dist/semantic.min.js"></script>
+		<script>
+			 $(document).ready(function(){
+		        $('#modalDelete').modal({
+				    closable  : true,
+				    onApprove : function() {
+				      window.alert('Approved!');
+				    }
+				  })
+		        .modal('attach events', '.deleteBtn', 'show'); 
+		    });
+		</script>
+	</head>
+	<body>
+		<div class="ui container">
+			<br>
+			<!-- Navigator -->
+			<div class="ui secondary menu">
+				<div class="item">
+					<img src="assets/images/logo-black.png">
+				</div>
+			    <!-- <div class="header item">Kogi</div> -->
+			    <a class="orange item" href="#">
+			      Member Profile 
+			    </a>
+			    <a class="red item" href="#">
+			      Blog Admin
+			    </a>
+
+			    <a class="green item active" href="#">
+			      System Administrator
+			    </a>
+
+			    <div class="right menu">
+			      <div class="item">
+			        <div class="ui mini icon input">
+			          <input type="text" placeholder="Search...">
+			          <i class="search link icon"></i>
+			        </div>
+			      </div>
+			      <a class="ui item">
+			        Logout
+			      </a>
+			    </div>
+			</div>
+			<!-- Navigator -->
+			<div class="ui divider"></div>
+			<br>
+
+			<!-- Sidebar -->
+			<div class="ui grid">
+			    <div class="four wide column">
+			        <!-- <div class="ui secondary vertical pointing fluid menu"> --> 
+			        <div class="ui vertical pointing menu">
+
+						<div class="item">
+						    <div class="header">Users</div>
+						    <div class="menu">
+						    	<a class="orange item active">List Users</a>
+						    	<a class="red item">Add new</a>
+						    	<!-- <a class="red item">View</a> -->
+						    </div>
+						</div>
+					
+						<div class="item">
+						    <div class="header">Role</div>
+						    <div class="menu">
+						    	<a class="orange item">List Roles</a>
+						      	<a class="red item">Add new</a>
+						    </div>
+						</div>
+
+						<div class="item">
+						    <div class="header">Source</div>
+						    <div class="menu">
+						      	<a class="orange item">List Source</a>
+						      	<a class="red item">Add new</a>
+						    </div>
+						</div>
+
+						<div class="item">
+							<div class="header">Batch</div>
+						    <div class="menu">
+						      	<a class="orange item">List Batch</a>
+						      	<a class="red item">Add new</a>
+						    </div>						
+						</div>
+					</div>
+			    </div>
+			    <div class="twelve wide column ">
+
+			    	<!-- <i class="dashboard icon"></i> -->
+			    	<h3 class="ui header">
+					  <i class="map signs icon"></i>
+					  <div class="content">Role Management</div>
+					</h3>
+					<br>
+					<!-- Content Here -->
+					<div class="ui segment">
+					  <!-- Table list user -->
+					  <h4 class="ui dividing header">Lists Of Roles</h4>
+					  <div class="ui text menu">
+					  	
+					 	
+
+						<div class="item">
+					      <div class="ui icon input">
+					        <input type="text" placeholder="Search...">
+					        <i class="search link icon"></i>
+					      </div>
+					    </div>
+
+					  	<div class="right menu">
+						<button class="ui secondary button"><i class="plus icon"></i>Add New</button>
+					  	</div>
+
+					  </div>
+
+					  <table class="ui table">
+					  <thead>
+					    <tr>
+					      <th>#</th>
+					      <th>Role</th>
+					      <th>Description</th>
+					      <th></th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <td>1</td>
+					      <td><strong>Admin</strong></td>
+					      <td>Allow acess administration page</td>
+					      <td class="right aligned">
+
+					      	<button class="tiny ui inverted blue button"><i class="edit icon"></i>Edit</button>
+
+					      	<button class="deleteBtn tiny ui inverted red button"><i class="delete icon"></i>Delete</button>
+
+					      </td>
+					    </tr>
+					    <tr>
+					      <td>1</td>
+					      <td><strong>User</strong></td>
+					      <td>Allow acess user page</td>
+					      <td class="right aligned">
+
+					      	<button class="tiny ui inverted blue button"><i class="edit icon"></i>Edit</button>
+
+					      	<button class="deleteBtn tiny ui inverted red button"><i class="delete icon"></i>Delete</button>
+
+					      </td>
+					    </tr>
+					  </tbody>
+					  <tfoot>
+					    <tr><th colspan="4">
+						      <div class="ui right floated pagination menu">
+						        <a class="icon item">
+						          <i class="left chevron icon"></i>
+						        </a>
+						        <a class="item">1</a>
+						        <a class="item">2</a>
+						        <a class="item">3</a>
+						        <a class="icon item">
+						          <i class="right chevron icon"></i>
+						        </a>
+						      </div>
+					    	</th>
+					  	</tr>
+					  </tfoot>
+					</table>
+
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Modal confirm delete -->
+			<div id="modalDelete" class="ui modal">
+	
+				  <div class="header">Delete</div>
+				  <div class="content">
+				    <p>Are you sure to delete this item?</p>
+				  </div>
+				  <div class="actions">
+				    <div class="ui approve negative button">Yes</div>
+				    <div class="ui cancel button">Cancel</div>
+				  </div>
+
+			</div>
+			<!-- Modal confirm delete -->
+		</div>
+	</body>
+</html>
